@@ -21,4 +21,11 @@ FORMS    += mainwindow.ui
 
 CONFIG += static
 
-LIBS += -lcurl -lcrypto
+LIBS += -Llibs/ -lcurl  -lrtmp -lssh2 -lssl -lcrypto -lidn 
+
+win32 {
+	LIBS += -lwldap32 
+}
+
+QMAKE_CXXFLAGS += -DCURL_STATICLIB -Iinclude
+
