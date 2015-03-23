@@ -33,7 +33,7 @@ std::string md5hex(const std::string & data) {
 }
 
 std::string buildurlcode(std::string id, std::string phonenum, std::string cc) {
-    std::string tokenData_token   = "PdA2DJyKoUrwLw1Bg6EIhzh502dF9noR9uFCllGk1413401214298"; //{phone};
+    std::string tokenData_token   = "PdA2DJyKoUrwLw1Bg6EIhzh502dF9noR9uFCllGk1419900882708"; //{phone};
 
     std::string token = md5hex(tokenData_token + phonenum);
 
@@ -74,7 +74,7 @@ size_t write_data(void *ptr, size_t size, size_t nmemb, t_buf *stream) {
 std::string dohttpget(std::string url) {
     t_buf res; memset(&res,0,sizeof(res));
 
-    const char useragent[] = "WhatsApp/2.12.49 S40Version/14.26 Device/Nokia302";
+    const char useragent[] = "WhatsApp/2.12.61 S40Version/08.71 Device/NokiaX2-01";
     struct curl_slist *chunk = NULL;
     chunk = curl_slist_append(chunk, "Accept: text/json");
 
